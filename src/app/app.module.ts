@@ -17,7 +17,6 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     FormsModule,
-    http.HttpModule
   HttpModule
   ],
   providers: [ProductService],
