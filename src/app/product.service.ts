@@ -27,5 +27,8 @@ export class ProductService {
     getProducts():Observable<Product[]> {
       return this._http.get(this._productsUrl).map(response =><Product[]>response.json());
     }
+  _productsUrl(_productsUrl: any) {
+    throw new Error('Method not implemented.');
+  }
 
   }
