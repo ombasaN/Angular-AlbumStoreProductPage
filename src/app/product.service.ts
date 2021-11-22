@@ -16,6 +16,7 @@ export class ProductService {
   private _albumUrl ='../assets/album.json';
 
   private_productsUrl='../assets/products.json';
+  _productsUrl: string;
 
   constructor(private _http: Http) { }
 
@@ -27,8 +28,5 @@ export class ProductService {
     getProducts():Observable<Product[]> {
       return this._http.get(this._productsUrl).map(response =><Product[]>response.json());
     }
-  _productsUrl(_productsUrl: any) {
-    throw new Error('Method not implemented.');
-  }
 
   }
