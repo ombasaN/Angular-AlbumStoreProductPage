@@ -11,17 +11,18 @@ import{Product} from './product';
 
 @Injectable()
 export class ProductService {
-
   private _albumUrl ='../assets/album.json';
   private_productsUrl='../assets/products.json';
 
   constructor(private _http: Http) { }
 
   getAlbum(id:number):Observable<Album> {
-    return this._http.get(this._albumUrl).map((response)=><Album>response.json());
+    return this._http.get(this._albumUrl).map(response =><Album>response.json());
 
     }
 
-    getProducts(){
-
+    getProducts():Observable<Product[]> {
+      return this._http.get(this._productsUrl).map(response =><Product[]>response.json());
     }
+
+  }
