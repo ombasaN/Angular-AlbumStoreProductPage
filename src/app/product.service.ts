@@ -9,14 +9,11 @@ import { Observable } from 'rxjs/Observable';
 
 import{Product} from './product';
 
-
-
 @Injectable()
 export class ProductService {
 
   private _albumUrl ='../assets/album.json';
   private_productsUrl='../assets/products.json';
-  private _productsUrl: string;
 
   constructor(private _http: Http) { }
 
